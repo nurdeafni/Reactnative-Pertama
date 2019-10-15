@@ -1,7 +1,8 @@
 import React from 'react';
 import{
     View,
-    Text
+    Text,
+    TouchableOpacity
 } from 'react-native';
 
 class ComponentState extends React.Component{
@@ -12,14 +13,17 @@ class ComponentState extends React.Component{
     componentWillMount(){
         this.setState({name :'Denis'});
     }
-    render(){
         //#3 read component state menggunakan tis.state.<nama.state>
+        render(){
         return(
             <View>
+                <TouchableOpacity>
                 <Text>{this.state.name}</Text>
+                </TouchableOpacity>
             </View>
         );
     }
 }
+
 
 export default ComponentState;
