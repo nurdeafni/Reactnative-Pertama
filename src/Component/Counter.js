@@ -22,6 +22,9 @@ class Counter extends React.Component {
     render() {
         //#3 read component state
         let currentValue = this.state.value
+        if(currentValue%6 == 0){
+            currentValue= "Kucing"
+        }
         return (
             <View>
                 <Text> Nilai State saat ini : {currentValue} </Text>
