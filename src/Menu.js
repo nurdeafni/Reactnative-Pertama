@@ -9,23 +9,18 @@ import Rumus from './Persegi'
 import Pajak from './PerhitunganPajak'
 
 class Menu extends React.Component{
-    state= { tipe: 'rumus'};
+    state= { tipe: null};
 
-    componentWillMount(){
-        this.setState({
-            tipe: 'rumus'
-        })
-    }
 
     SlidePindah(){
         if(this.state.tipe == 'rumus'){
             return(
                 <Rumus/>
-            );
+            )
         }else if(this.state.tipe == 'pajak'){
             return(
                 <Pajak/>
-            );
+            )
         }
     }
     render(){
